@@ -186,54 +186,54 @@ if(isset($_SESSION['username'])){
         <!-- Form fields -->
        <center><h2>Add Doctor Form</h2></center><br>
         <label for="fullname">Full Name:</label>
-  <input type="text" id="doctor_fullname" name="doctor_fullname">
+  <input type="text" id="doctor_fullname" name="doctor_fullname" required>
 
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username">
+  <input type="text" id="username" name="username" required>
 
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
+  <input type="email" id="email" name="email" required>
 
   <label for="password">Password:</label>
-  <input type="password" id="password" name="password">
+  <input type="password" id="password" name="password" required>
 
   <label for="qualification">Qualification:</label>
-  <input type="text" id="qualification" name="qualification">
+  <input type="text" id="qualification" name="qualification" required>
 
   <label for="specialization">Specialization:</label>
-  <input type="text" id="specialization" name="specialization">
+  <input type="text" id="specialization" name="specialization" required>
 
   <label for="experience">Experience:</label>
-  <input type="number" id="experience" name="experience">
+  <input type="number" id="experience" name="experience" required>
 
   <label for="gender">Gender:</label>
-  <select id="gender" name="gender">
+  <select id="gender" name="gender" required>
     <option value="">Select Gender</option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
   </select>
 
   <label for="doctor_time">Doctor Time:</label>
-  <input type="time" id="doctor_time" name="doctor_time">
+  <input type="time" id="doctor_time" name="doctor_time" required>
 
   <label for="address">Address:</label>
-  <input type="text" id="address" name="address">
+  <input type="text" id="address" name="address" required>
 
   <label for="phone">Phone:</label>
-  <input type="text" id="phone" name="phone">
+  <input type="text" id="phone" name="phone" required>
 
   <label for="status">Status:</label>
-  <select id="status" name="status">
+  <select id="status" name="status" required>
     <option value="">Select Status</option>
     <option value="Active">Active</option>
     <option value="Inactive">Inactive</option>
   </select>
 
   <label for="profile">Profile:</label>
-  <input type="file" id="profile" name="profile">
-
-  <button type="submit" onclick="">Submit</button>
-    </form>
+  <input type="file" id="profile" name="profile" required>
+  
+  <button type="submit">Submit</button>
+</form>
 </div>
         </div>
     </div>

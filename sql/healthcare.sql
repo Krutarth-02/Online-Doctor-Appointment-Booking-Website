@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2025 at 03:56 AM
+-- Generation Time: Apr 10, 2025 at 07:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -66,7 +66,7 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`appointment_id`, `user_id`, `fullname`, `gender`, `age`, `doctor_fullname`, `disease`, `appointment_date`, `appointment_time`, `address`, `contact_number`, `remark`, `status`) VALUES
-(8, 1, 'Khadodiya Punitaben Rames', 'female', 49, 'Dr. Atit Kantawala', 'Body Pain', '2025-03-06', '09:41:00', 'vadodara', '6351030523', 'get well sonn!..', 'pending');
+(3, 2, 'Khadodiya Punutaben Rames', 'female', 49, 'Dr. Kinnari R. Khadodiya', 'Body Pain', '2025-03-26', '10:41:00', 'A 9/10 Vinayak Tenement Deep Multiplex Road behind Amar Nagar.', '0875825929', '', 'pending');
 
 -- --------------------------------------------------------
 
@@ -96,10 +96,10 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`doctor_id`, `doctor_fullname`, `username`, `email`, `password`, `qualification`, `specialization`, `experience`, `gender`, `doctor_time`, `address`, `phone`, `status`, `profile`) VALUES
-(1, 'Dr. Apurva Modi', 'Apurva1', 'apurvamodi1@gmail.com', 'Apurva1', 'M.B.B.S', 'Hert', 10, 'Male', '10:00:00', 'Anand', '6395896814', 'Active', 'ApurvaModi.jpg'),
+(1, 'Dr. Apurva Modi', 'Apurva1', 'apurvamodi1@gmail.com', 'Apurva1', 'M.B.B.S', 'Hert', 10, 'Male', '10:00:00', 'Anand', '6395896814', 'Inactive', 'ApurvaModi.jpg'),
 (2, 'Dr. Sidharth Shah', 'Sidharth2', 'shidharthshah2@gmail.com', 'Sidharth2', 'M.D.', 'Mind', 10, 'Male', '10:00:00', 'Anand', '6847525945', 'Active', 'ShidharthShah.jpg'),
 (3, 'Dr. Dipali Patel', 'Dipali3', 'dipalipatel3@gmail.com', 'Dipali3', 'M.D.S', 'Dentist', 10, 'Female', '10:00:00', 'Anand', '6578423415', 'Active', 'DipaliPatel.jpg'),
-(4, 'Dr. Atit Kantawala', 'Atit4', 'atitkantawala4@gmail.com', 'Atit4', 'M.S.', 'Orthopedic', 17, 'Male', '10:00:00', 'Anand', '8745812497', 'Inactive', 'AtitKantawala.jpg'),
+(4, 'Dr. Atit Kantawala', 'Atit4', 'atitkantawala4@gmail.com', 'Atit4', 'M.S.', 'Orthopedic', 17, 'Male', '10:00:00', 'Anand', '8745812497', 'Active', 'AtitKantawala.jpg'),
 (5, 'Dr. Seetharam Sudha', 'Seetharam5', 'seetharamsudha5@gmail.com', 'Seetharam5', 'M.S.', 'Eyes and Hands', 9, 'Female', '10:00:00', 'Anand', '8415789213', 'Active', 'SeetharamSudha.jpg'),
 (6, 'Dr. Sachin Arora', 'Sachin6', 'sachinarora6@gmail.com', 'Sachin6', 'M.B.B.S.', 'Child', 27, 'Male', '10:00:00', 'Anand', '8624157895', 'Active', 'SachinArora.jpg'),
 (7, 'Dr. Sanehal Adiwala', 'Sanehal7', 'sanehaladiwala7@gmail.com', 'Sanehal7', 'M.B.B.S.', 'Gastrologist', 14, 'Male', '10:00:00', 'Anand', '6314789215', 'Active', 'SnehalAdiwala.jpg'),
@@ -111,7 +111,8 @@ INSERT INTO `doctor` (`doctor_id`, `doctor_fullname`, `username`, `email`, `pass
 (13, 'Dr. Nilay Shah', 'Nilay14', 'nilayshah14@gmail.com', 'Nilay14', 'M.S.', 'Eyes & Hand', 19, 'Male', '16:00:00', 'Anand', '63490974', 'Active', 'nilay.jpg'),
 (14, 'Dr. Pinky Solanki', 'Pinky15', 'pinkysolanki15@gmail.com', 'Pinky15', 'M.B.B.S.', 'Child', 10, '', '16:00:00', 'Anand', '6352845608', 'Active', 'pincky.jpg'),
 (15, 'Dr. Hiren P. Patel ', 'Hiren16', 'hirenpatel16@gmail.com', 'Hiren16', 'M.D.', 'Orthopedic', 12, 'Male', '16:00:00', 'Anand', '8925413578', 'Active', 'hiren.jpg'),
-(16, 'Dr. Gunvant R. Mayavanshi', 'Gunvant17', 'gunvantmayavanshi17@gmail.com', 'Gunvant17', 'M.B.B.S', 'Skin', 30, 'Male', '16:00:00', 'Anand', '8564237894', 'Active', 'gunvant.jpg');
+(16, 'Dr. Gunvant R. Mayavanshi', 'Gunvant17', 'gunvant17@gmail.com', 'Gunvant17', 'M.B.B.S', 'Skin', 30, 'Male', '16:00:00', 'Anand', '8564237894', 'Active', 'gunvant.jpg'),
+(17, 'Dr. Kinnari R. Khadodiya', 'Kinnari12', 'kinnarikhadodiya12@gmail.com', 'Kinnari12', 'B.P.T', 'physiotherapy', 1, 'Female', '10:00:00', 'Anand', '8758642535', 'Inactive', 'kinnu.jpg');
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,10 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `Name`, `username`, `email`, `password`) VALUES
 (1, 'Krutarth Khadodiya', 'Punita23', 'punita23@gmail.com', 'Punita23'),
-(2, 'Krutarth Khadodiya', 'Krutarth2114', 'krutarthkhadodiya2@gmail.', 'Krutarth2114');
+(2, 'Krutarth Khadodiya', 'Krutarth2114', 'krutarthkhadodiya2@gmail.', 'Krutarth2114'),
+(3, 'Diya', 'diya2', 'diya2@gmail.com', 'diya12'),
+(4, 'Bhavika', 'bhavika1', 'bhavika1@gmail.com', 'bhavika1'),
+(5, 'Jaybodala', 'Jay2', 'jay2@gmail.com', 'Jaybodala2');
 
 --
 -- Indexes for dumped tables
@@ -166,19 +170,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
