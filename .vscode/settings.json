@@ -1,5 +1,6 @@
 {
     "git.enabled": true,
     "git.blame.editorDecoration.enabled": true,
-    "git.diagnosticsCommitHook.Enabled": true
+    "git.diagnosticsCommitHook.Enabled": true,
+    "php.validate.executablePath": ""
 }
