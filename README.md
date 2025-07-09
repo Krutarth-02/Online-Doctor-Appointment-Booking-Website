@@ -39,7 +39,6 @@ It allows patients to book, view, and manage appointments with doctors, and enab
 | MySQL       | Database                       |
 | HTML/CSS    | Frontend structure and design  |
 | JavaScript  | Client-side interactivity      |
-| Bootstrap   | Responsive UI design (optional)|
 | TCPDF       | PDF generation (for reports)   |
 
 ---
