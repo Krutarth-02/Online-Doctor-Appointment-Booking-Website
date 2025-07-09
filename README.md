@@ -1,194 +1,92 @@
-# 🏥 Online Doctor Appointment Booking Website
+# 🩺 Online Doctor Appointment Booking Website
 
-This is a web-based **Doctor Appointment Booking System** built using **PHP, MySQL, HTML, CSS, and JavaScript**.  
-It allows patients to book, view, and manage appointments with doctors, and enables admins to manage doctors, appointments, and feedback.
-
----
-
-## 🚀 Live Demo
-
-<!-- Uncomment and add your URL if hosted -->
-<!-- [View Live Website](https://yourwebsite.com) -->
-
----
-
-## 📌 Key Features
-
-### 👤 User (Patient) Panel
-- Register and login with secure credentials
-- Book appointments with available doctors
-- View, reschedule, or cancel appointments
-- View doctor profiles and specializations
-- Download appointment PDFs
-
-### 👨‍⚕️ Admin Panel
-- Login with admin credentials
-- Add / Edit / Delete doctor profiles
-- Set doctor availability and specializations
-- View and manage all patient appointments
-- Approve or cancel bookings
-- Manage user feedback and patient records
-
----
-
-## 🛠 Tech Stack
-
-| Technology  | Usage                          |
-|-------------|--------------------------------|
-| PHP         | Backend & server-side logic    |
-| MySQL       | Database                       |
-| HTML/CSS    | Frontend structure and design  |
-| JavaScript  | Client-side interactivity      |
-| TCPDF       | PDF generation (for reports)   |
-
----
-
-## 🗃 Database
-
-Database Name: `healthcare`
-
-### 🔧 Tables
-- `user` — stores patient details  
-- `doctor` — stores doctor profiles  
-- `appointments` — stores bookings  
-- `feedback` — stores patient feedback  
-
-> All database scripts are included in the `/database` or `/sql` folder.
-
----
-
-## 📦 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/doctor-appointment-system.git
-
-# Move into the project folder
-cd doctor-appointment-system
-
-# Place the project in your local server (XAMPP/htdocs or WAMP/www)
-
-# Import the database
-# Open phpMyAdmin and import `healthcare.sql` file
-
-# Start Apache and MySQL from XAMPP/WAMP
-Then visit: http://localhost/doctor-appointment-system/
-
-📁 Folder Structure
-📂 doctor-appointment-system/
-├── 📁 admin/           # Admin dashboard & pages
-├── 📁 user/            # User (patient) pages
-├── 📁 assets/          # CSS, JS, images
-├── 📁 includes/        # Header, footer, DB config
-├── 📁 sql/             # Database SQL file
-├── index.php           # Home page
-├── login.php           # Login page
-├── register.php        # User registration
-🔐 Login Credentials (Demo)
-Admin Login
-Username: admin
-
-Password: admin123
-
-User Login
-Register as a new patient from register.php
-
-📄 License
-This project is open-source and available for personal and academic use.
-
-🙋‍♂️ Author
-Made with ❤️ by [Your Name]
-📧 Email: your.email@example.com
-🔗 GitHub: @yourusername
-
-
----
-# 🏥 Doctor Appointment Booking Website
-
-A responsive, web-based system that allows patients to book doctor appointments online, and provides an admin dashboard for managing doctors, appointments, and feedback.
+This is a web-based application where patients can register, log in, and book appointments with doctors. Admins can manage doctors, appointments, and user feedback. The site is built using PHP, MySQL, HTML, CSS, and JavaScript.
 
 ---
 
 ## 🚀 Features
 
-### 👤 Patient Panel
-- Patient registration & login
-- Search doctors by specialization
-- Book/reschedule/cancel appointments
-- View doctor details
-- Download appointment PDF
+### 👨‍⚕️ For Users (Patients)
+- Register & Login
+- Book appointments with doctors
+- View, cancel, or reschedule appointments
+- View doctor profiles and specializations
+- Check appointment history
 
-### 🛡 Admin Panel
+### 🛠️ For Admin
 - Admin login
-- Add/edit/delete doctor profiles
-- Set doctor availability
-- Approve or reject appointments
-- Manage patient feedback & records
+- Add, update, or delete doctors
+- Manage appointment requests
+- Approve or cancel appointments
+- View and manage patient feedback
 
 ---
 
-## 🛠 Tech Stack
+## 🧾 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** PHP
-- **Database:** MySQL
-- **PDF:** TCPDF Library (for PDF generation)
-
----
-
-## 🗃 Database
-
-- **Database Name:** `healthcare`
-- **Main Tables:**
-  - `user` – stores patient info
-  - `doctor` – stores doctor profiles
-  - `appointments` – stores appointment bookings
-  - `feedback` – stores patient reviews
-
-> SQL file included in `/sql/healthcare.sql`
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP
+- **Database**: MySQL
 
 ---
 
-## 📁 Folder Structure
+## 📂 Folder Structure
 
-📦 doctor-appointment-website/
-├── admin/ → Admin dashboard files
-├── user/ → Patient panel files
-├── assets/ → CSS, JS, images
-├── includes/ → DB config, headers, etc.
-├── index.php → Homepage
-├── login.php → Login page
-├── register.php → Registration page
-├── sql/ → SQL database file
+project/
+│
+├── admin/ # Admin panel files
+├── user/ # User (patient) panel files
+├── css/ # Global stylesheets
+├── images/ # Profile images, assets
+├── js/ # JavaScript files
+├── config/ # DB config files
+├── includes/ # Reusable PHP components
+├── index.php # Homepage
+└── README.md # This file
 
+## 🛠️ How to Use
 
----
+### 🔧 1. Clone the Repository
 
-## ⚙️ Installation (Localhost)
+git clone https://github.com/yourusername/online-doctor-booking.git
+🧑‍💻 2. Setup Local Server
+Use XAMPP/WAMP/LAMP and place the project folder inside the htdocs/ directory.
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/online-doctor-appointment-booking-website.git
-Move project to htdocs (XAMPP) or www (WAMP).
+🗄️ 3. Import the Database
+Open phpMyAdmin
 
-Import healthcare.sql in phpMyAdmin.
+Create a new database (e.g., healthcare)
 
-Start Apache & MySQL.
+Import the provided .sql file inside the database/ folder
 
-Visit: http://localhost/Online-Doctor-Appointment-Booking-Website
+⚙️ 4. Configure Database Connection
+Edit config/db.php or similar config file to update:
 
-🔐 Demo Credentials
-Admin Login:
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'healthcare';
+🔐 Login Credentials
+✅ User (Patient)
+Register via /user/register.php
+
+Then log in at /user/login.php
+
+🛡️ Admin
+Access: /admin/login.php
+
+Default credentials (change after first login):
 
 Username: admin
-
 Password: admin123
+📌 Notes
+Make sure Apache and MySQL are running in your XAMPP/WAMP
 
-Patient Login:
+For any image upload issues, make sure the images/ folder is writable
 
-Register at /register.php
+Designed to be mobile-responsive
 
-👨‍💻 Author
-Made with ❤️ by Krutarth Khadodiya
-🔗 GitHub: krutarth-02
-📧 Email: krutarthkhadodiya2@gmail.com
+📞 Contact
+For any queries, feel free to reach out at:
+📧 [krtuarthkhadodiya2@gmail.com]
+📸 Instagram: @unbreakable_krutarth
